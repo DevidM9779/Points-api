@@ -95,9 +95,12 @@ Sample Request Body (JSON)
   ```
   GET /api/points/balance
   ```
+  Use this route to get the balance of every payer in the transaction history (DB).
   
    ### Delete Route
   
   ```
   DELETE /api/points/delete
   ```
+  
+  Use this route to clear the database between tests.
