@@ -1,16 +1,20 @@
 const transaction = require('../models/transactionModel')
 
 exports.spend = async (req, res) => {
+
+
     const points = req.body.points
+    if (!points) return res.status(400).send("Points field is required");
 
     // Get transaction history from db
     let transactions = await transaction.find({}).sort({'timestamp': 'asc'})
     // Go through it to determine how many points should be taken away from each payer
     let spentRecord = getSpent(points, transactions)
 
-    await addRecordToDB(transactions[transactions.length-1].timestamp, spentRecord)
+    await addRecordToDB(transactions[transactions.length - 1].timestamp, spentRecord)
 
     res.send(spentRecord)
+
 }
 
 const getSpent = (points, transactions) => {
