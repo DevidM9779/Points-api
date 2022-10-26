@@ -15,7 +15,7 @@ app.use('/api/points', apiRoutes)
  */
 
 const mongoose = require('mongoose')
-const uri = "mongodb+srv://pointsApi:pointsApi123@pointsapicluster.u0xqa4b.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://pointsApi:pointsApi123@pointsapicluster.u0xqa4b.mongodb.net/PointsDB?retryWrites=true&w=majority"
 
 mongoose.connect(uri)
     .then(() => {

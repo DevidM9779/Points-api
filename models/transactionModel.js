@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const transactionModel = new mongoose.Schema({
     payer: {type: String},
     points: {type: Number},
-    timeStamp: {type: Date}
+    timestamp: {type: Date}
 })
 
 
-module.exports = mongoose.model('Transactions', transactionModel);
+module.exports = mongoose.model('pointsDB', transactionModel, 'Transactions');
