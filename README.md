@@ -7,6 +7,15 @@ A RESTful service built from scratch for a take-home coding assessment
 - [x] Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
 - [x] Return all payer point balances.
 
+## Installation
+- Run the following commands to install and run the code:
+```
+  git clone https://github.com/DevidM9779/points-api.git
+  cd points-api
+  npm install
+  node server.js
+```
+
 ## How to test
 - By default this app will be running in local port 3000.
 - Download Postman to run HTTP requests and be able to see the responses from the server.
