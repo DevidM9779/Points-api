@@ -1,8 +1,8 @@
-let express = require('express')
-let router = express.Router();
-let addTransactions = require('../controllers/transactionController')
+const express = require('express')
+const router = express.Router();
+let transactionController = require('../controllers/transactionController')
 
 // Routes
-router.post('/add', addTransactions.post)
+router.post('/add', transactionController.post)
 
 module.exports = router;

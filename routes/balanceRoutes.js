@@ -1,9 +1,7 @@
 const express = require('express')
 const router = express.Router()
+let balanceController = require('../controllers/balanceController')
 
-
-router.get('/balance', (req, res) => {
-    res.send({points: 5000})
-})
+router.get('/balance', balanceController.findAll)
 
 module.exports = router
