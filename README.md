@@ -2,11 +2,16 @@
 A RESTful service built from scratch for a take-home coding assessment
 
 
-
 ## Todo
 - [x] Add transactions for a specific payer and date.
 - [x] Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
 - [x] Return all payer point balances.
+
+## How to test
+- By default this app will be running in local port 3000.
+- Download Postman to run HTTP requests and be able to see the responses from the server.
+- Insert the API calls in the API Reference section below in Postman.
+
 
 ## API Reference
 - [/api/points/add](#Add-Transactions-Route)
@@ -18,7 +23,7 @@ A RESTful service built from scratch for a take-home coding assessment
 ### Add Transactions Route
   
   ```
-  POST /api/points/add
+  POST http://localhost:3000/api/points/add
   ```
   
   | Parameter  | Type | Description |
@@ -76,7 +81,7 @@ Sample Request Body (JSON)
   ### Spend Route
   
   ```
-  POST /api/points/spend
+  POST http://localhost:3000/api/points/spend
   ```
 | Parameter  | Type | Description |
 | :-- | :-- | :-- |
@@ -93,14 +98,14 @@ Sample Request Body (JSON)
    ### Balance Route
   
   ```
-  GET /api/points/balance
+  GET http://localhost:3000/api/points/balance
   ```
   Use this route to get the balance of every payer in the transaction history (DB).
   
    ### Delete Route
   
   ```
-  DELETE /api/points/delete
+  DELETE http://localhost:3000/api/points/delete
   ```
   
   Use this route to clear the database between tests.
