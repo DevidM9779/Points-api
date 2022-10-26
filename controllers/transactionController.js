@@ -7,13 +7,13 @@ exports.add = async (req, res) => {
             entry.timestamp = new Date(entry.timestamp)
             await transaction.insertMany(entry)
         }
-        res.send('Added')
     }
     // Else execute a single transaction
     else {
         req.body.timestamp = new Date(req.body.timestamp)
         await transaction.insertMany(req.body)
     }
+    res.send('Added')
 }
 
 exports.delete = async (req, res) => {

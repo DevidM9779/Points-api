@@ -7,7 +7,6 @@ let balanceRoutes = require('./balanceRoutes')
 
 // routes
 router.use('', addTransactionRoutes)
-// router.use('', addAllTransactionsRoutes)
 router.use('', spendRoutes)
 router.use('', balanceRoutes)
 
