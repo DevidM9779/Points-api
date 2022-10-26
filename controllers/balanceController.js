@@ -2,7 +2,6 @@ const transaction = require('../models/transactionModel')
 
 exports.findAll = async (req, res) => {
     let transactions = await transaction.find({}).sort({'timestamp': 'asc'})
-    console.log(transactions)
     res.send(getBalance(transactions))
 }
 
@@ -20,7 +19,6 @@ const getBalance = (transactions) => {
         } else {
             balance[transaction.payer] += transaction.points
         }
-        console.log(balance)
     }
 
     return balance

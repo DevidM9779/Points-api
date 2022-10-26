@@ -1,12 +1,8 @@
-let express = require('express')
-let router = express.Router();
+const express = require('express')
+const router = express.Router();
+let spendController = require('../controllers/spendController')
 
-
-router.post('/spend', (req, res) => {
-    res.send('spent')
-})
-
-
-
+// Routes
+router.post('/spend', spendController.spend)
 
 module.exports = router;
